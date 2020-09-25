@@ -14,11 +14,15 @@ namespace WorkerService
             CreateHostBuilder(args).Build().Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
+
+
+        public static IHostBuilder CreateHostBuilder(string[] args) => // skapa host maskine
             Host.CreateDefaultBuilder(args)
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddHostedService<Worker>();
                 });
+
+        
     }
 }
